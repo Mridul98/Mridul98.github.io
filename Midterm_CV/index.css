@@ -1,0 +1,54 @@
+h2{
+    color:#114867;
+}
+.sub_heading{
+    padding-left: 40px;
+    
+}
+.lists ol{
+    font-weight: bold;
+}
+.bold{
+    font-weight:bold;
+}
+.lists{
+    line-height: 85%;
+    margin-top:10px;
+}
+.education,.expo, .activities{
+    padding-left:40px;
+    padding-top:10px;
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color: #114867;
+  } 
+  img{
+      border-radius:10%;
+      width: 200px;
+      height: 200px;
+  }
+  .image{
+      align-content: center;
+  }
+  h4{
+      margin-top: 10px;
+  }
+  h3{
+      padding-top: 11px;
+      font-weight: bold;
+  }
+  ol{
+      line-height: 85%;
+      color:#222f3e;
+      
+  }
+  body{
+      background-color:#f1f2f6;
+  }
