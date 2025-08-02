@@ -1,275 +1,462 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Mahmud Un Nabi Mridul">
-    <meta name="keywords" content="Mahmud,Mahmud Un Nabi,Mridul,mridul,mahmud un nabi, mahmud un nabi mridul">
-    <meta name="author" content="Mahmud Un Nabi Mridul">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <title>Mahmud Un Nabi Mridul</title>
+    <title>Mahmud Nabi - Data Engineer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.5;
+            color: #000000;
+            background: #ffffff;
+            font-size: 11pt;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 0.5in;
+            min-height: 11in;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 20pt;
+            border-bottom: 1pt solid #000000;
+            padding-bottom: 15pt;
+        }
+
+        .name {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 6pt;
+            text-transform: uppercase;
+            letter-spacing: 1pt;
+        }
+
+        .title {
+            font-size: 12pt;
+            color: #000000;
+            margin-bottom: 10pt;
+            font-weight: normal;
+        }
+
+        .contact-info {
+            font-size: 10pt;
+            color: #000000;
+        }
+
+        .contact-line {
+            margin-bottom: 4pt;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 18pt;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 10pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5pt;
+            border-bottom: 1pt solid #000000;
+            padding-bottom: 3pt;
+        }
+
+        /* Professional Summary */
+        .summary {
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #000000;
+            text-align: justify;
+            margin-bottom: 10pt;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            margin-bottom: 15pt;
+        }
+
+        .skills-category {
+            margin-bottom: 8pt;
+        }
+
+        .skills-label {
+            font-weight: bold;
+            font-size: 10pt;
+            margin-bottom: 3pt;
+            color: #000000;
+        }
+
+        .skills-list {
+            font-size: 10pt;
+            color: #000000;
+            line-height: 1.3;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 15pt;
+            page-break-inside: avoid;
+        }
+
+        .job-header {
+            margin-bottom: 6pt;
+        }
+
+        .job-title {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 2pt;
+        }
+
+        .company-info {
+            font-size: 11pt;
+            color: #000000;
+            margin-bottom: 2pt;
+        }
+
+        .company-name {
+            font-weight: bold;
+        }
+
+        .duration-location {
+            font-size: 10pt;
+            color: #000000;
+            margin-bottom: 6pt;
+            font-style: italic;
+        }
+
+        .achievements {
+            margin-left: 0pt;
+        }
+
+        .achievement-item {
+            margin-bottom: 6pt;
+            color: #000000;
+            line-height: 1.4;
+            font-size: 10pt;
+            text-align: justify;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 10pt;
+        }
+
+        .degree {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 3pt;
+        }
+
+        .university {
+            font-size: 10pt;
+            color: #000000;
+            margin-bottom: 2pt;
+        }
+
+        .edu-details {
+            font-size: 10pt;
+            color: #000000;
+            font-style: italic;
+        }
+
+        /* Certifications Section */
+        .cert-item {
+            font-size: 10pt;
+            color: #000000;
+            margin-bottom: 4pt;
+            line-height: 1.3;
+        }
+
+        /* Publications Section */
+        .publication-item {
+            font-size: 10pt;
+            color: #000000;
+            line-height: 1.4;
+            margin-bottom: 8pt;
+        }
+
+        .publication-title {
+            font-weight: bold;
+            margin-bottom: 3pt;
+        }
+
+        .publication-journal {
+            font-style: italic;
+        }
+
+        .publication-link {
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        /* ATS Optimization */
+        .keywords {
+            display: none;
+        }
+
+        /* Print Optimization */
+        @media print {
+            body {
+                background: white;
+                font-size: 11pt;
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                max-width: none;
+                margin: 0;
+                padding: 0.5in;
+                box-shadow: none;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+
+            .experience-item {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15pt;
+                margin: 10pt;
+            }
+
+            .header {
+                text-align: left;
+            }
+
+            .name {
+                font-size: 16pt;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container-fluid ">
-        <div class="row">
-            <div class="col">
-                    <h1 class="sub_heading" >
-                            Mahmud Un Nabi Mridul
-                    </h1>
-                    <h2 class="sub_heading">Data Engineer</h2>
-                    <div class="lists">
-                        <ol>
-                            Passionate about Data Science and Data Engineering            
-                        </ol>
-                        <ol>
-                            Machine Learning , Deep Learning , Graph Neural Network           
-                        </ol>
-                        <ol>
-                            MLOps enthusiast
-                        </ol>
-                        <ol>
-                            Learning about the model explainability of deep learning models
-                        </ol>
-                
-                    </div>
-                <div class="education">
-                    <h3>
-                        <i class="fas fa-university"></i> Education
-                    </h3> 
-                    <hr> 
-                    <p><h5 class="bold">SSC</h5> Adamjee Cantonment Public School</p>
-                    <p><h5 class="bold">HSC</h5> Adamjee Cantonment College</p>
-                    <p><h5 class="bold">UNDERGRADUATION (2017-2021)</h5>Independent University, Bangladesh</p>
-                    <p><h5 class="bold">Major</h5>Computer Science and Engineering</p>
-                    <p><h5 class="bold">Minor</h5>Economics</p>
-                </div>
-            
-            <div class="activities">
-                <h3>
-                    <i class="fas fa-snowboarding"></i>  Experience
-                </h3> 
-                <hr> 
-                <p>
-                    <h5 class="bold">Junior Software Engineer (Data Science Team)</h5> 
-                    <h6 class="bold">January 2021 - June 2022</h6> 
-                    <ul>
-                        <li>Built a system to determine semantic meaning of food item’s words using Word2Vec
-                            embedding methods via gensim library. The goal was to approximate similar food items given a name of food items using approximate nearest neighbors primarily developed by Spotify. This was primarily used for candidate generation based on the similarity of added item in the cart.</li>
-                        <li>Built and maintaining ETL pipelines based on Luigi and docker for all the verticals (MongoDB as source and Amazon RedShift as sink) for analytics purpose.</li>
-                        <li>Built a Streamlit app for fraud detection pipeline and visualizing the causation of fraud related transactions.</li>
-                        <li>I have developed a scoring mechanism based on the ticket users travel regularity pattern, spent monetary value and travel frequency to analyze, segment and assign scores to each ticket users for rolling out promotional campaigns to the potential high valued customers.</li>
-                        <li>Built a system that can generate food item bundles based on Apriori Algorithm.</li>
-                        <li>Created automated audit log generation system for Shohoz Salary app. </li>
-                    </ul>
-                </p>
-                <p>
-                    <h5 class="bold">Intern (Data Science Team)</h5>
-                    <h5 class="bold"> Shohoj Limited </h5>
-                    <h6 class="bold">October 2020 - December 2020</h6> 
-                    <li>Building and pre-processing dataset for the Food Recommendation Engine</li>
-                    <li>Helping QA’s to test out the recommendation pipeline by providing the Long tail plot analysis to segment the most popular items and non-popular items.
-                        This task was automated later on
-                    </li>
-                </p>
-            </div>
-            <div class="expo">
-                <h3>
-                    <i class="fas fa-project-diagram"></i> Personal Projects
-                </h3> 
-                <hr> 
-                <p><h5 class="bold">Modified Unified Spatio-Temporal Graph Convolutional Network (PyTorch)</h5> 
-                    This project is part of my undergrad senior project. I have pulled out the original USTGCN architecture and modified the 
-                    architecture for the traffic congestion prediction of Mirpur Road Network Formulated as a Graph structure.
-                    This project is based upon this paper
-                    <p>Project based on: <a href="https://arxiv.org/abs/2104.12518"> USTGCN paper link</a> </p>
-                    <p>Project code and results: <a href="https://github.com/Mridul98/DhakaUSTGCN"> project link</a> </p>
-                </p>
-
-                <p><h5 class="bold">Implementation of Class Activation Mapping (Implemented using PyTorch)</h5>
-                This project was a part of the neural network course assignment. 
-                The goal was to generate heatmaps using Global Average Pooling Layer in CNN architecture to understand the model behaviour when
-                classifying different image objects. Fashion-MNIST dataset were used for the classification task.
-                <a href="https://github.com/Mridul98/Class-Activation-Mapping-of-FashionMNIST-Pytorch-"> project link</a>
-                </p>
-                <p><h5 class="bold">Implementation of Neural Style Transfer Algorithm (PyTorch)</h5> 
-                This project was based on the famous neural style transfer algorithm to transfer style of one image 
-                and apply it to another image. The program can generate the evolution of applying the styles from primary noisy image upto the final Styled image 
-                <a href="https://github.com/Mridul98/Neural-Style-Transfer"> project link</a>
-                </p>
-                <p><h5 class="bold">Using AutoEncoder to generate encodings and reconstruct image objects from Fashion-MNIST dataset (PyTorch)</h5> 
-                Implemented a CNN autoencoder to generate latent embeddings by reconstructing the image.The latent embeddings can be used for any downstream task (e.g : Image classsification)
-                <a href="https://github.com/Mridul98/CNN_AutoEncoder"> project link</a>
-                </p>
-               
-            </div>
-           
-            </div>
-            <div class="col">
-               <div class="image">
-                   <img src="new_cv.jpg" alt="profile picture">
-               </div>
-               <div class="personalInfo">
-                    <h3><i class="fas fa-info-circle"></i> Personal Information</h3> 
-                    <hr>
-                    <p><h5 class="bold">PHONE</h5> +8801552465331</p>
-                    <p><h5 class="bold">EMAIL</h5>munmridul@gmail.com</p>
-                    <p><a href="https://github.com/mridul98"><h5 class="bold">GITHUB LINK</h5></p></a>
-               </div>
-               
-               <div class="skills">
-                    <h3><i class="fas fa-chalkboard-teacher"></i> Skills</h3> 
-                    <hr>
-                    <p>
-                        <h5 class="bold">PROGRAMMING STACK</h5>
-                        <ol> <p>Python</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-75 progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        <ol> <p>Java</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-50 progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        <ol> <p>Bash Script</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-50 progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        <ol> <p>Docker</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-50 progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        <ol> <p>SQL</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-50 progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        <ol> <p>NoSQL (MongoDB)</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-50 progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        
-                    </p>
-                    <p>
-                        <h5 class="bold">Certifications</h5>
-                        <ol> <p> <b> Neural Networks and Deep Learning </b> </p>
-                        <p>Certified by: Coursera <a href="https://www.coursera.org/account/accomplishments/certificate/TCJ6N3CQEGX6"> (See Credential)</a></p>
-                        </ol>
-
-                        <ol> <p> <b> Improving Deep Neural Networks </b> </p>
-                        <p>Certified by: Coursera <a href="https://www.coursera.org/account/accomplishments/certificate/U3V2ZPFACEEZ"> (See Credential)</a></p>
-                        </ol>
-
-                        
-                        <ol> <p> <b> Structuring Machine Learning Projects </b> </p> 
-                        <p>Certified by: Coursera <a href="https://www.coursera.org/account/accomplishments/certificate/97RBHMCECMB7"> (See Credential)</a></p>
-                        </ol>
-
-                        
-                        <ol> <p> <b> Convolutional Neural Network </b> </p>
-                        <p>Certified by: Coursera <a href="https://www.coursera.org/account/accomplishments/certificate/BP8239PRY6ME"> (See Credential)</a></p>
-                        </ol>
-                    </p>
-                    <p><h5 class="bold">Deep Learning Frameworks</h5>
-                        <ol> <p>PyTorch</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-50 progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        <ol> <p>Sklearn</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-50 progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                    </p>
-                    <p><h5 class="bold">Web API</h5>
-                        <ol> <p>FastAPI</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-50 progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-        
-                    </p>
-                    <p><h5 class="bold">Data Science and Big Data tools</h5>
-                        <ol> <p>Pandas</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-75 progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        <ol> <p>NumPy</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-75 progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        <ol> <p>Apache Spark</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-50 progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        <ol> <p>dask</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-50 progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        <ol> <p>Plotly</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-75 progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        <ol> <p>Seaborn</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-75 progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                       
-                        <ol> <p>AWS Data Wrangler</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-75 progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-
-                            
-                            
-                    </p>
-                    <p><h5 class="bold">Workflow Management System and VCS</h5>
-                        <ol> <p>Git</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-50 progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        <ol> <p>Luigi</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-50 progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                        <ol> <p>Apache Airflow</p>   
-                            <div class="progress">
-                                <div class="progress-bar w-25 progress-bar-striped bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </ol>
-                    </p> 
-                    
-                   
-                    
-
-            </div>
-               
-                
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1 class="name">Mahmud Nabi</h1>
+            <div class="title">Data Engineer II</div>
+            <div class="contact-info">
+                <div class="contact-line">Email: munmridul@gmail.com | Phone: Available upon request</div>
+                <div class="contact-line">LinkedIn: linkedin.com/in/mahmudnabi-9174b958 | Portfolio: mridul98.github.io</div>
+                <div class="contact-line">Location: Dhaka, Bangladesh</div>
             </div>
         </div>
-        
-        
-           
-        
+
+        <!-- Keywords for ATS (Hidden) -->
+        <div class="keywords">
+            Data Engineer Python SQL DBT Snowflake PostgreSQL AWS Docker Kubernetes ETL ELT Apache Airflow 
+            Data Pipeline Machine Learning Graph Neural Networks Test Driven Development Data Modeling 
+            Cloud Computing Data Warehousing Analytics Business Intelligence Optimization Statistical Analysis
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="summary">
+                Experienced <strong>Data Engineer</strong> with over <strong>5 years</strong> of expertise in designing and implementing robust data solutions across cloud platforms and enterprise environments. Demonstrated proficiency in end-to-end <strong>data pipeline</strong> development, optimization, and maintenance using modern technologies including Python, SQL, DBT, <strong>Snowflake</strong>, and AWS services. Successfully delivered high-impact projects resulting in 75% reduction in manual processes and optimized <strong>data workflows</strong> processing over 30 million records daily. Published researcher with specialized knowledge in Graph Neural Networks and traffic forecasting systems, contributing to academic literature while maintaining practical focus on production-ready solutions. Expertise encompasses <strong>data modeling</strong>, cloud architecture, containerization, and test-driven development methodologies with proven track record of reducing operational costs and improving system reliability. Proficient in <strong>MLOps tools</strong> including MLflow, scikit-learn, and <strong>Kubernetes</strong> orchestration for scalable machine learning deployment.
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-section">
+                <div class="skills-category">
+                    <div class="skills-label">Programming Languages:</div>
+                    <div class="skills-list">Python, SQL, JavaScript, Bash</div>
+                </div>
+                <div class="skills-category">
+                    <div class="skills-label">Data Technologies:</div>
+                    <div class="skills-list">DBT (<strong>Data</strong> Build Tool), Apache Airflow, Luigi, <strong>Snowflake</strong>, PostgreSQL, Amazon Redshift, MongoDB, <strong>Data Lake</strong> Architecture</div>
+                </div>
+                <div class="skills-category">
+                    <div class="skills-label">Cloud Platforms:</div>
+                    <div class="skills-list">Amazon Web Services (AWS), AWS EKS, AWS S3, AWS ECR</div>
+                </div>
+                <div class="skills-category">
+                    <div class="skills-label">DevOps & Tools:</div>
+                    <div class="skills-list">Docker, <strong>Kubernetes</strong>, Argo Workflows, GitHub Actions, Git, CI/CD Pipelines</div>
+                </div>
+                <div class="skills-category">
+                    <div class="skills-label"><strong>Data Engineering</strong>:</div>
+                    <div class="skills-list">ETL/ELT Pipeline Development, <strong>Data Modeling</strong>, Data Quality Monitoring, Incremental <strong>Data</strong> Processing, Metadata Management</div>
+                </div>
+                <div class="skills-category">
+                    <div class="skills-label">Machine Learning & <strong>MLOps</strong>:</div>
+                    <div class="skills-list">Graph Neural Networks, Word2Vec, Recommendation Systems, Statistical Analysis, Fraud Detection, <strong>MLflow</strong>, scikit-learn, <strong>MLOps tools</strong></div>
+                </div>
+                <div class="skills-category">
+                    <div class="skills-label">Development Methodologies:</div>
+                    <div class="skills-list">Test-Driven Development (TDD), Agile Development, Data Vault 2.0, API Development</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="section">
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Data Engineer II</div>
+                    <div class="company-info"><span class="company-name">Optimizely</span> - Digital Experience Platform</div>
+                    <div class="duration-location">January 2024 - Present | Remote, Bangladesh</div>
+                </div>
+                <div class="achievements">
+                    <div class="achievement-item">• Implemented robust machine learning pipeline infrastructure using scikit-learn and <strong>MLflow</strong> frameworks orchestrated by <strong>Kubernetes</strong>-native Argo workflows for scalable model training, validation, and deployment across distributed computing environments</div>
+                    <div class="achievement-item">• Restructured monolithic <strong>data pipeline</strong> repository with comprehensive GitHub Actions CI/CD automation framework for automated linting, issue resolution, and development environment validation procedures prior to production deployment cycles</div>
+                    <div class="achievement-item">• Led Annual Recurring Revenue audit automation project from <strong>data engineering</strong> perspective, achieving 75% reduction in manual audit efforts through comprehensive DBT implementation and Argo workflow automation deployed on AWS EKS infrastructure</div>
+                    <div class="achievement-item">• Designed and implemented comprehensive metadata store architecture in <strong>Snowflake</strong> for big <strong>data</strong> enrichment pipeline state management, enabling robust incremental ETL processing for Builtwith <strong>data</strong> ingestion workflows with improved reliability and performance monitoring</div>
+                    <div class="achievement-item">• Successfully migrated and re-engineered legacy <strong>data pipeline</strong> systems to idempotent and self-healing architecture leveraging advanced metadata store functionality for state persistence, resulting in reduction of pipeline maintenance costs to near-zero operational overhead</div>
+                    <div class="achievement-item">• Optimized reverse ETL pipeline infrastructure with incremental export capabilities using DBT transformations and Argo Workflows orchestration, successfully processing over 30 million records daily from <strong>Snowflake</strong> <strong>data</strong> warehouse to Salesforce CRM integration</div>
+                    <div class="achievement-item">• Refactored enterprise <strong>data pipeline</strong> architecture to minimize development friction and eliminate technical debt through systematic implementation of Test-Driven Development methodology and establishment of comprehensive best practices for <strong>data pipeline</strong> documentation and <strong>data modeling</strong> design patterns</div>
+                    <div class="achievement-item">• Developed proof-of-concept streaming <strong>data</strong> ingestion solution for real-time <strong>data</strong> processing into <strong>Snowflake</strong> from multiple business <strong>data</strong> sources utilizing Strimzi Kafka deployment on <strong>Kubernetes</strong> infrastructure for enhanced scalability and fault tolerance</div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Data Engineer (Level 1)</div>
+                    <div class="company-info"><span class="company-name">Optimizely</span> - Digital Experience Platform</div>
+                    <div class="duration-location">June 2022 - March 2024 | Remote, Bangladesh</div>
+                </div>
+                <div class="achievements">
+                    <div class="achievement-item">• Achieved significant 55% reduction in memory consumption for existing Python-based <strong>data pipeline</strong> applications through systematic root cause analysis, performance profiling, and strategic optimization implementation addressing memory leaks and inefficient <strong>data</strong> structures</div>
+                    <div class="achievement-item">• Containerized and automated robust, modular <strong>data pipeline</strong> infrastructure utilizing comprehensive GitHub Actions workflow integration with AWS S3 object storage, AWS ECR container registry, and AWS EKS orchestration platform for enhanced deployment efficiency and scalability</div>
+                    <div class="achievement-item">• Implemented highly scalable <strong>data</strong> ELT workflow architecture in AWS EKS environment using Argo workflow orchestration platform, significantly improving <strong>data</strong> SLA performance metrics and enhancing batch <strong>data pipeline</strong> filtering capabilities for enterprise-scale processing</div>
+                    <div class="achievement-item">• Deployed efficient <strong>data</strong> transformation processes using DBT framework within <strong>Snowflake</strong> <strong>data</strong> warehouse environment for optimized analytical workload performance, including complex SQL transformations, <strong>data</strong> quality checks, and automated testing procedures</div>
+                    <div class="achievement-item">• Constructed comprehensive <strong>data</strong> ingestion pipeline systems using Apache Airflow orchestration and Python development for seamless multi-system integration connecting PostgreSQL databases and <strong>Snowflake</strong> <strong>data</strong> warehouse destinations with robust error handling and monitoring</div>
+                    <div class="achievement-item">• Developed and implemented comprehensive <strong>Data</strong> Quality Monitoring solutions to ensure business <strong>data</strong> integrity standards, including automated <strong>data</strong> validation rules, anomaly detection algorithms, and real-time alerting systems for <strong>data</strong> reliability assurance</div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Junior Software Engineer (Data Science Team)</div>
+                    <div class="company-info"><span class="company-name">Shohoz</span> - Leading Ride-sharing and Online Ticketing Platform</div>
+                    <div class="duration-location">January 2021 - June 2022 | Dhaka, Bangladesh</div>
+                </div>
+                <div class="achievements">
+                    <div class="achievement-item">• Developed advanced semantic analysis system for food item categorization using Word2Vec embedding methodology through gensim library implementation, enabling sophisticated similarity-based candidate generation algorithms for personalized shopping cart recommendation engines with improved user engagement metrics</div>
+                    <div class="achievement-item">• Constructed and maintained comprehensive ETL pipeline infrastructure using Luigi workflow management and Docker containerization across all business verticals, facilitating seamless MongoDB to Amazon RedShift <strong>data</strong> migration for enterprise analytics applications with automated <strong>data</strong> validation and error recovery mechanisms</div>
+                    <div class="achievement-item">• Built interactive Streamlit web application for advanced fraud detection pipeline visualization and comprehensive transaction causation analysis, supporting security operations and regulatory compliance initiatives with real-time monitoring dashboards and automated alert generation systems</div>
+                    <div class="achievement-item">• Engineered sophisticated customer scoring mechanism based on comprehensive travel regularity pattern analysis, monetary value assessment, and frequency metrics for advanced customer segmentation strategies and targeted promotional campaign deployment with measurable ROI improvements</div>
+                    <div class="achievement-item">• Implemented intelligent food item bundle generation system utilizing Apriori Algorithm for comprehensive market basket analysis and cross-selling optimization strategies, resulting in increased average order value and enhanced customer satisfaction metrics</div>
+                    <div class="achievement-item">• Created automated audit logging system and developed comprehensive reporting pipeline infrastructure for invoice generation and transaction processing within Shohoz Salary application using Luigi framework with integrated <strong>data</strong> validation and compliance monitoring capabilities</div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div class="job-title">Data Science Intern</div>
+                    <div class="company-info"><span class="company-name">Shohoz</span> - Leading Ride-sharing and Online Ticketing Platform</div>
+                    <div class="duration-location">October 2020 - January 2021 | Dhaka, Bangladesh</div>
+                </div>
+                <div class="achievements">
+                    <div class="achievement-item">• Constructed and preprocessed comprehensive datasets for Food Recommendation Engine development and optimization, including <strong>data</strong> cleaning, feature engineering, and statistical analysis to ensure high-quality training <strong>data</strong> for machine learning model development</div>
+                    <div class="achievement-item">• Supported quality assurance testing initiatives for recommendation pipeline systems through comprehensive Long tail plot analysis implementation, enabling automated segmentation of popular and non-popular items for systematic validation and performance optimization of recommendation algorithms</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <div class="degree">Bachelor of Science in Computer Science and Engineering</div>
+                <div class="university">Independent University, Bangladesh</div>
+                <div class="edu-details">Graduation Year: 2021 | Cumulative GPA: 3.43/4.00</div>
+            </div>
+        </div>
+
+        <!-- Professional Certifications -->
+        <div class="section">
+            <h2 class="section-title">Professional Certifications</h2>
+            <div class="cert-item">
+                <strong>Structuring Machine Learning Projects</strong> - Coursera/DeepLearning.AI<br>
+                Certificate ID: BP8239PRY6ME | Verification: <span class="publication-link">https://www.coursera.org/account/accomplishments/certificate/BP8239PRY6ME</span>
+            </div>
+            <div class="cert-item">
+                <strong>Modelling <strong>Data</strong> Warehouse with DataVault 2.0</strong> - Udemy Professional Certification<br>
+                Certificate ID: UC-a90b5bd7-a30a-420c-af25-52ebea7777f9 | Verification: <span class="publication-link">https://www.udemy.com/certificate/UC-a90b5bd7-a30a-420c-af25-52ebea7777f9/</span>
+            </div>
+            <div class="cert-item">
+                <strong>Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization</strong> - Coursera/DeepLearning.AI<br>
+                Certificate ID: U3V2ZPFACEEZ | Verification: <span class="publication-link">https://www.coursera.org/account/accomplishments/certificate/U3V2ZPFACEEZ</span>
+            </div>
+            <div class="cert-item">
+                <strong>Convolutional Neural Networks</strong> - Coursera/DeepLearning.AI<br>
+                Certificate ID: TCJ6N3CQEGX6 | Verification: <span class="publication-link">https://www.coursera.org/account/accomplishments/certificate/TCJ6N3CQEGX6</span>
+            </div>
+            <div class="cert-item">
+                <strong>Neural Networks and Deep Learning</strong> - Coursera/DeepLearning.AI<br>
+                Certificate ID: 97RBHMCECMB7 | Verification: <span class="publication-link">https://www.coursera.org/account/accomplishments/certificate/97RBHMCECMB7</span>
+            </div>
+        </div>
+
+        <!-- Technical Blog Posts -->
+        <div class="section">
+            <h2 class="section-title">Technical Blog Posts & Projects</h2>
+            <div class="publication-item">
+                <div class="publication-title">Test Driven Development in <strong>Data Engineering</strong> using DBT on PostgreSQL</div>
+                <div class="publication-journal">Associated with Optimizely - Technical Implementation Guide</div>
+                <div style="margin-top: 8pt; line-height: 1.4;">
+                    Comprehensive exploration of Test Driven Development methodology applied to <strong>data engineering</strong> workflows during the <strong>data</strong> transformation phase. This technical guide demonstrates practical implementation of unit testing frameworks within DBT environments using PostgreSQL <strong>data</strong> warehouse infrastructure. The project addresses critical challenges in maintaining code modularity, testability, and readability while examining the necessary trade-offs required for effective TDD adoption in <strong>data engineering</strong> contexts.
+                </div>
+                <div style="margin-top: 6pt;">
+                    Article: <span class="publication-link">https://www.linkedin.com/pulse/test-driven-development-data-engineering-using-dbt-postgres-nabi-hfzbc/</span>
+                </div>
+                <div style="margin-top: 4pt;">
+                    Repository: <span class="publication-link">https://github.com/Mridul98/dbt_unit_test_best_practice</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publications -->
+        <div class="section">
+            <h2 class="section-title">Research Publications</h2>
+            <div class="publication-item">
+                <div class="publication-title">Traffic Forecasting using Modified Unified Spatio-Temporal Graph Convolutional Network for Developing City: Dhaka, Bangladesh (A Case Study)</div>
+                <div class="publication-journal">Journal of Electrical Systems - Academic Research Publication</div>
+                <div>Available at: <span class="publication-link">https://journal.esrgroups.org/jes/article/view/4668</span></div>
+            </div>
+        </div>
+
+        <!-- Additional Keywords for ATS -->
+        <div class="section">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="summary">
+                Big <strong>Data</strong> Processing, Cloud <strong>Data</strong> Architecture, Real-time Analytics, <strong>Data</strong> Governance, Performance Optimization, Scalable Systems Design, Microservices Architecture, API Development, Statistical Modeling, Business Intelligence, <strong>Data</strong> Visualization, Agile Methodology, Cross-functional Collaboration, Technical Leadership, Problem Solving, Critical Thinking, Communication Skills, Project Management, Continuous Integration, Continuous Deployment, Infrastructure as Code, Monitoring and Alerting, Database Administration, <strong>Data</strong> Security, Compliance Management, <strong>MLOps</strong>, <strong>Data Lake</strong> Management, <strong>Snowflake</strong> Administration, <strong>Data Engineering</strong> Best Practices.
+            </div>
+        </div>
     </div>
-    
 </body>
 </html>
